@@ -14,3 +14,7 @@ $(TARGET): $(SRC)
 
 clean:
 	rm -f $(TARGET)
+
+# Run the compiled program with administrative privileges on the loopback interface
+run: $(TARGET)
+	sudo ./$(TARGET) lo
